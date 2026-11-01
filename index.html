@@ -97,6 +97,31 @@
 @media(min-width:700px){.player .shell{max-width:510px;margin:auto}.player{background:#070b10}.player .lab-content{max-height:52%}}
 @media(max-height:690px){.player .shell{padding-bottom:48px}.player .shell:after{font-size:9px;padding:5px}.player .sound-toggle{bottom:39px}.player .view{gap:4px}.lab-brand{padding:2px 0}.lab-alert{padding:4px}.lab-content{max-height:43%}.lab-progress .bars{margin:4px 0}.lab-status{padding:4px}}
 
+
+/* V6: photographed industrial chassis from approved visual concept */
+.player{padding:0!important;background:#030508!important}
+.player .shell{position:relative!important;width:min(100vw,620px)!important;max-width:620px!important;height:100%!important;margin:0 auto!important;border:0!important;border-radius:0!important;padding:0!important;background:#101319 url('hawkins-chassis.webp') center center / 100% 100% no-repeat!important;box-shadow:none!important;display:block!important}
+.player .shell:before,.player .shell:after{display:none!important}
+.player .shell-head{position:absolute!important;z-index:6;top:1.3%!important;left:23%!important;width:70%!important;height:6%!important;min-height:0!important;padding:0!important;display:flex!important;flex-direction:row!important;justify-content:flex-end!important;align-items:center!important;background:transparent!important}
+.player .shell-head>span:first-child{display:none!important}
+.player .shell-head .lights{font-size:clamp(7px,1.8vw,11px)!important;letter-spacing:.02em!important;background:#090c10c9;padding:5px 7px;border:1px solid #53565b;border-radius:3px;color:#e3caca}
+.player .shell-head .lamp{width:7px;height:7px}
+.player .monitor{position:absolute!important;top:12.1%!important;left:8.4%!important;width:83.2%!important;height:67.5%!important;min-height:0!important;flex:none!important;border:2px solid #142936!important;border-radius:3%/2%!important;background:radial-gradient(ellipse at 50% 35%,#0a2c3b 0%,#04151e 65%,#02080c 100%)!important;box-shadow:inset 0 0 40px #000,0 0 0 5px #02070ba8,0 0 0 7px #38505b66!important;overflow:hidden!important}
+.player .crt{padding:clamp(6px,1.5vw,12px)!important}
+.player .crt-top{font-size:clamp(7px,1.55vw,11px)!important}
+.player .view{padding:4px 0!important;gap:5px!important}
+.player .lab-content{max-height:45%!important}
+.player .lab-brand{font-size:clamp(11px,3.1vw,19px)!important;padding:3px 0 5px!important}
+.player .lab-alert{font-size:clamp(10px,2.8vw,16px)!important;padding:5px 2px!important}
+.player .lab-status{padding:5px 3px!important;font-size:clamp(9px,2.25vw,12px)!important}
+.player .lab-progress .bars{margin:5px 0!important;gap:3px!important}
+.player .bar{padding:5px 0!important;font-size:clamp(10px,2.7vw,15px)!important}
+.player .lab-panel{padding:4px 3px!important}
+.player .lab-footnote{font-size:clamp(7px,1.8vw,10px)!important}
+.player .shell-foot{display:none!important}
+.player .sound-toggle{position:absolute!important;z-index:25!important;right:6%!important;bottom:8.7%!important;font-size:clamp(9px,2vw,12px)!important;padding:7px 8px!important;background:#080d13e8!important;border:1px solid #b06b3e!important;color:#f5dbb3!important}
+@media(min-width:700px){.player .shell{max-width:620px!important}}
+@media(max-height:740px){.player .monitor{top:12%!important;height:67%!important}.player .lab-content{max-height:41%!important}.player .lab-footnote{display:none!important}}
 </style></head><body>
 <section class="setup" id="setup"><div class="tag">U.S. DEPARTMENT OF ENERGY • RESTRICTED ACCESS</div><h1>HAWKINS<br>LABORATORY</h1><p>ПРОТОКОЛ №013 / СИСТЕМА ВІДНОВЛЕННЯ ЗВ'ЯЗКУ</p><label class="small" for="room">КОД СЕАНСУ (ОДНАКОВИЙ НА ОБОХ ПРИСТРОЯХ)</label><input id="room" value="ANYA13" maxlength="24"><div class="roles"><button id="playerBtn">ЕКРАН АНІ</button><button id="operatorBtn">ПУЛЬТ ОПЕРАТОРА</button></div><p class="small" id="connectStatus">Потрібен інтернет і доступ до Firebase. Після входу гравчиня запитує доступ, оператор підтверджує.</p></section>
 <section id="player" class="player hidden"><div class="rotate"><strong>HAWKINS LAB</strong>Лабораторний дисплей працює в горизонтальному режимі.</div><div class="shell"><header class="shell-head"><span>HAWKINS NATIONAL LABORATORY // 1983</span><span class="lights"><i id="lamp" class="lamp"></i><span id="headState">CHANNEL 013 / OFFLINE</span></span></header><div class="monitor" id="monitor"><div class="static" id="static"></div><div class="crt"><div class="crt-top"><span>CLASSIFIED // EYES ONLY</span><span id="clock">00:00:00</span></div><div class="view" id="view"></div><div class="crt-top"><span>HNL • SECURE TERMINAL 013</span><span id="footState">NO CARRIER</span></div></div></div><footer class="shell-foot"><span>PROPERTY OF HAWKINS LABORATORY</span><span>WARNING • UNAUTHORIZED ACCESS PROHIBITED</span></footer></div><button class="sound-toggle" id="soundBtn">🔊 УВІМКНУТИ ЗВУК</button></section>
