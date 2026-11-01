@@ -122,6 +122,19 @@
 .player .sound-toggle{position:absolute!important;z-index:25!important;right:6%!important;bottom:8.7%!important;font-size:clamp(9px,2vw,12px)!important;padding:7px 8px!important;background:#080d13e8!important;border:1px solid #b06b3e!important;color:#f5dbb3!important}
 @media(min-width:700px){.player .shell{max-width:620px!important}}
 @media(max-height:740px){.player .monitor{top:12%!important;height:67%!important}.player .lab-content{max-height:41%!important}.player .lab-footnote{display:none!important}}
+
+/* V7: photographic feeds taken from the two approved cinematic visual concepts. */
+.lab-feed{background:#061a28!important}
+.lab-grid{z-index:1;opacity:.25;pointer-events:none}
+.lab-tower-photo{position:absolute;inset:0;background:url('hawkins-tower.webp') center center / cover no-repeat;filter:contrast(1.08) saturate(.93);animation:towerBreath 6s ease-in-out infinite alternate}
+@keyframes towerBreath{from{transform:scale(1.02);filter:brightness(.78) contrast(1.08)}to{transform:scale(1.065);filter:brightness(1.08) contrast(1.08)}}
+.lab-scan{z-index:2;opacity:.6}
+.lab-video{background:#061a27!important}
+.lab-person-photo{position:absolute;inset:-2%;background:url('hawkins-scientist.webp') center center / cover no-repeat;transform-origin:50% 58%;animation:scientistApproach 5.4s ease-out forwards;filter:contrast(1.08) saturate(.85)}
+@keyframes scientistApproach{0%{transform:scale(.70) translateY(15%);opacity:.35;filter:blur(5px) brightness(.45)}24%{opacity:.7}60%{transform:scale(.92) translateY(3%);opacity:1;filter:blur(2px) brightness(.85)}100%{transform:scale(1.16) translateY(-2%);opacity:1;filter:blur(.4px) brightness(1)}}
+.lab-video-noise{z-index:2!important;opacity:.6}
+.lab-feed-top{z-index:5!important;text-shadow:0 1px 5px #000,0 0 5px #000}
+@media(prefers-reduced-motion:reduce){.lab-person-photo{animation:none;transform:none;opacity:1}.lab-tower-photo{animation:none}}
 </style></head><body>
 <section class="setup" id="setup"><div class="tag">U.S. DEPARTMENT OF ENERGY • RESTRICTED ACCESS</div><h1>HAWKINS<br>LABORATORY</h1><p>ПРОТОКОЛ №013 / СИСТЕМА ВІДНОВЛЕННЯ ЗВ'ЯЗКУ</p><label class="small" for="room">КОД СЕАНСУ (ОДНАКОВИЙ НА ОБОХ ПРИСТРОЯХ)</label><input id="room" value="ANYA13" maxlength="24"><div class="roles"><button id="playerBtn">ЕКРАН АНІ</button><button id="operatorBtn">ПУЛЬТ ОПЕРАТОРА</button></div><p class="small" id="connectStatus">Потрібен інтернет і доступ до Firebase. Після входу гравчиня запитує доступ, оператор підтверджує.</p></section>
 <section id="player" class="player hidden"><div class="rotate"><strong>HAWKINS LAB</strong>Лабораторний дисплей працює в горизонтальному режимі.</div><div class="shell"><header class="shell-head"><span>HAWKINS NATIONAL LABORATORY // 1983</span><span class="lights"><i id="lamp" class="lamp"></i><span id="headState">CHANNEL 013 / OFFLINE</span></span></header><div class="monitor" id="monitor"><div class="static" id="static"></div><div class="crt"><div class="crt-top"><span>CLASSIFIED // EYES ONLY</span><span id="clock">00:00:00</span></div><div class="view" id="view"></div><div class="crt-top"><span>HNL • SECURE TERMINAL 013</span><span id="footState">NO CARRIER</span></div></div></div><footer class="shell-foot"><span>PROPERTY OF HAWKINS LABORATORY</span><span>WARNING • UNAUTHORIZED ACCESS PROHIBITED</span></footer></div><button class="sound-toggle" id="soundBtn">🔊 УВІМКНУТИ ЗВУК</button></section>
