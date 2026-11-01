@@ -20,3 +20,5 @@ HAWKINS LAB — ЕТАП 1, ТЕСТОВА ВЕРСІЯ 2
 - Потрібна увімкнена Anonymous Authentication і доступні правила Firebase Realtime Database.
 - Звук потребує натискання користувача через обмеження браузерів.
 - GitHub Pages не змінюється автоматично: файли потрібно завантажити вручну.
+
+V3: Portrait player screen on mobile. Operator panel and Firebase logic unchanged.
